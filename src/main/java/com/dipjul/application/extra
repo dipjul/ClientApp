@@ -1,0 +1,19 @@
+//	@RequestMapping(value="/clients", 
+//			method = RequestMethod.POST, 
+//			consumes = MediaType.APPLICATION_JSON_VALUE,
+//			produces = MediaType.APPLICATION_JSON_VALUE)
+//	public Client addClient(@RequestBody Client client) {
+//		return service.saveClient(client);
+//	}
+
+
+	
+//	@RequestMapping(value="/clients/{id}", 
+//			method = RequestMethod.GET, 
+//			produces = MediaType.APPLICATION_JSON_VALUE)
+//	public Client findClientById(@PathVariable int id) {
+//		return service.getClientById(id);
+//	}
+
+//	@RequestMapping(value = "/clients/{id}",method=RequestMethod.DELETE)
+	@PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
